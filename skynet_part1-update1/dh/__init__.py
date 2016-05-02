@@ -61,7 +61,7 @@ def create_dh_key():
     # Creates a Diffie-Hellman key
     # Returns (public, private)
     g = 2  # Primitive root modulo calculated based on above raw_prime.
-    a = random.randint(0, int(2**32)) # Our_private key NOTE: Change size of int, Read RFC to find the value
+    a = random.randint(0, int(2**32)) # Our_private key NB: Change size of int, Read RFC to find the value
     A= pow(g,a,prime ) # Our pubilc key
     return (A, a)
 
