@@ -39,6 +39,7 @@ class StealthConn(object):
             #self.cipher = XOR.new(shared_hash[:4])
           ####################################################################################
 
+# Luke's Feedback: Send IV in data rather than send all, append IV to data being sent and split up when received.
     def send(self, data):
         if self.cipher:
             encrypted_data = self.cipher.encrypt(data)
